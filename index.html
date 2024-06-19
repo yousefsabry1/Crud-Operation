@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap.min.css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- icon.css -->
+    <link rel="stylesheet" href="css/all.min.css"/>
+    <!-- main.css -->
+    <link rel="stylesheet" href="css/style.css"/>  
+    <!-- media.css -->
+    <link rel="stylesheet" href="css/media.css"/>
+</head>
+<body class="bg-dark">
+    
+
+<div class="container py-4">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="ProductName" placeholder="name@example.com">
+        <label for="ProductName">Product Name</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="number" class="form-control" id="ProductPrice" placeholder="name@example.com">
+        <label for="ProductPrice">Product Price</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="ProductDes" placeholder="name@example.com">
+        <label for="ProductDes">Product Description</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input list="data" type="text" class="form-control" id="ProductCat" placeholder="name@example.com">
+        <label for="ProductCat">Product Category</label>
+        <datalist id="data">
+            <option value="Tv">
+            <option value="Ios">
+            <option value="Android">
+            <option value="Laptop">
+        </datalist>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="file" class="form-control" id="ProductImg" placeholder="name@example.com">
+        <label for="ProductImg">Product Image</label>
+    </div>
+
+    <button onclick="addproduct()">Add Product</button>
+</div>
+
+<div class="container">
+    <div class="row gap-5" id="demo">
+    </div>
+</div>
+
+
+
+
+
+    <!-- index.js -->
+<script src="js/index.js"></script>
+</body>
+</html>
