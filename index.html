@@ -2,7 +2,7 @@
 <html lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Crud Operations</title>
     <!-- Bootstrap.min.css -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <!-- icon.css -->
@@ -43,12 +43,19 @@
     </div>
 
     <div class="form-floating mb-3">
-        <input type="file" class="form-control" id="ProductImg" placeholder="name@example.com">
+        <input type="file" accept="image/*" class="form-control" id="ProductImg" placeholder="name@example.com">
         <label for="ProductImg">Product Image</label>
     </div>
 
-    <button onclick="addproduct()">Add Product</button>
+
+
+    <button class="addbutton" onclick="addproduct()">Add Product</button>
 </div>
+
+
+<input type="text" oninput="searchproduct()" class="form-control mb-5 my-3 m-auto w-50" id="ProductSearch" placeholder="Search For Product">
+
+
 
 <div class="container">
     <div class="row gap-5" id="demo">
