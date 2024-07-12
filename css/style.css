@@ -66,3 +66,8 @@
   .upbutton:active {
     top: 2px;
   }
+
+  .card img {
+    height: 250px;
+    object-fit: contain;
+  }

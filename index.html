@@ -17,22 +17,34 @@
 
 <div class="container py-4">
     <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="ProductName" placeholder="name@example.com">
+        <input oninput="validationProduct(this)" type="text" class="form-control" id="ProductName" placeholder="name@example.com">
+        <div class="alert my-2 d-none alert-danger" role="alert">
+            UserName must start with Uppercase
+          </div>
         <label for="ProductName">Product Name</label>
     </div>
 
     <div class="form-floating mb-3">
-        <input type="number" class="form-control" id="ProductPrice" placeholder="name@example.com">
+        <input oninput="validationProduct(this)" type="number" class="form-control" id="ProductPrice" placeholder="name@example.com">
+        <div class="alert my-2 d-none alert-danger" role="alert">
+            Price must be at least 3 numbers
+        </div>
         <label for="ProductPrice">Product Price</label>
     </div>
 
     <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="ProductDes" placeholder="name@example.com">
+        <input oninput="validationProduct(this)" type="text" class="form-control" id="ProductDes" placeholder="name@example.com">
+        <div class="alert my-2 d-none alert-danger" role="alert">
+            Description must be at least 3 digits
+        </div>
         <label for="ProductDes">Product Description</label>
     </div>
 
     <div class="form-floating mb-3">
-        <input list="data" type="text" class="form-control" id="ProductCat" placeholder="name@example.com">
+        <input oninput="validationProduct(this)" list="data" type="text" class="form-control" id="ProductCat" placeholder="name@example.com">
+        <div class="alert my-2 d-none alert-danger" role="alert">
+            you must select Category from (Tv , Ios , Android , Laptop)
+        </div>
         <label for="ProductCat">Product Category</label>
         <datalist id="data">
             <option value="Tv">
@@ -49,7 +61,8 @@
 
 
 
-    <button class="addbutton" onclick="addproduct()">Add Product</button>
+    <button id="addBtn"  class="addbutton" onclick="addproduct()">Add Product</button>
+    <button id="updateBtn" class="upbutton d-none" onclick="updateProduct()" >Update Product</button>
 </div>
 
 
